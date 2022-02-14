@@ -18,6 +18,7 @@ public class LocationStats {
     public String getState() {
         return state;
     }
+    // getter
 
     public void setState(String state) {
         this.state = state;
