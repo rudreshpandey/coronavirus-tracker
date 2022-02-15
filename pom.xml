@@ -49,6 +49,7 @@
 			<version>0.0.20131108.vaadin1</version>
 			<scope>compile</scope>
 		</dependency>
+
 	</dependencies>
 
 	<build>
@@ -62,6 +63,7 @@
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.6.1</version>
 <!--				<version>${maven-compiler.version}</version>-->
 				<configuration>
 					<source>${java.version}</source>
