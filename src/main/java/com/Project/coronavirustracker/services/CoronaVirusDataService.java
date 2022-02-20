@@ -47,13 +47,16 @@ public class CoronaVirusDataService {
             int prevDayCases = Integer.parseInt(record.get(record.size() - 2));
             locationStat.setLatestTotalCases(latestCases);
             locationStat.setDiffFromPrevDay(latestCases - prevDayCases);
-            if(locationStat.getState().isBlank()){
+            if(locationStat.getCountry().equals("India")){
+                locationStat.setState(locationStat.getCountry());
+                allStats.add(locationStat);
+            }else if(locationStat.getState().isBlank()){
                 locationStat.setState(locationStat.getCountry());
                 newStatsBlank.add(locationStat);
             }else
             newStats.add(locationStat);
         }
-        this.allStats = newStats;
+        this.allStats.addAll(newStats);
         this.allStats.addAll(newStatsBlank);
     }
 
